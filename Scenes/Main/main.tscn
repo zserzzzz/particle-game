@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://g5bdabafkhm2"]
+
+[ext_resource type="PackedScene" uid="uid://c0lbkk63qnl2x" path="res://Scenes/Boundry/boundry.tscn" id="1_1r6ip"]
+[ext_resource type="Script" uid="uid://bvsjqv2jqay8a" path="res://Scripts/Main/main.gd" id="1_qw60k"]
+[ext_resource type="PackedScene" uid="uid://laaixln0snly" path="res://Scenes/RED/dust.tscn" id="2_lixft"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qw60k")
+
+[node name="Boundry" parent="." instance=ExtResource("1_1r6ip")]
+
+[node name="Dust" parent="." instance=ExtResource("2_lixft")]
+position = Vector2(134, 168)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://laaixln0snly"]
+
+[ext_resource type="Script" uid="uid://b7mxrlwbtax30" path="res://Scripts/PARTICLE/particle.gd" id="1_23w40"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4ybl1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enhv3"]
+
+[node name="RED" type="Node2D"]
+script = ExtResource("1_23w40")
+
+[node name="RigidBody" type="RigidBody2D" parent="."]
+mass = 0.055
+physics_material_override = SubResource("PhysicsMaterial_4ybl1")
+
+[node name="CollShape" type="CollisionShape2D" parent="RigidBody"]
+scale = Vector2(1.6, 1.6)
+shape = SubResource("RectangleShape2D_enhv3")
+
+[node name="Shape" type="Polygon2D" parent="RigidBody"]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, -16, 16, 16, 16, 16, -16, 16)
+uv = PackedVector2Array(-16, 0, 16, 0, 16, 0, 16, 24, 16, 24, -16, 24)
